@@ -19,7 +19,7 @@ struct Cli {
     /// Ping the given IP addr(s) every 5 seconds
     ping: Vec<std::net::IpAddr>,
 
-    #[arg(long, default_value_t = "https://wa7vc.org/marvin")]
+    #[arg(long, default_value = "https://wa7vc.org/marvin")]
     marvin: String,
 }
 
@@ -45,6 +45,7 @@ pub async fn main() -> std::io::Result<()> {
 
     while let Ok(Some(line)) = lines.next_line().await {
         // Upload this line to Marvin
+        println!("Sending line from {}:{} to Marvin: {}", args.hostname, line.source().display(), line.line());
     }
 
     Ok(())
