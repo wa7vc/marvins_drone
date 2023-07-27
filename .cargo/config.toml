@@ -1,2 +1,3 @@
 [build]
+# Needed for phoenix_channels_client
 rustflags = ["--cfg", "tokio_unstable"]

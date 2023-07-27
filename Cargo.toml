@@ -10,5 +10,8 @@ clap = { version = "4.0", features = ["derive"] }
 tokio = { version = "1", features = ["full"] }
 linemux = "0.3"
 hostname = "^0.3"
-phoenix_channels_client = { version = "0.1", features = ["native-tls"] }
+#phoenix_channels_client = { git = "https://github.com/liveview-native/phoenix-channels-client.git" }
+#phoenix_channels_client = { version = "0.3", features = ["native-tls"] }
+phoenix_channels_client = { git="https://github.com/liveview-native/phoenix-channels-client.git", version = "0.5" } #, features = ["native-tls"] }
+url = "2.3" # Pin to same version as phoenix_channels_client
 serde_json = { version = "^1.0" }
